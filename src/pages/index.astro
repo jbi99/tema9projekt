@@ -1,0 +1,94 @@
+---
+import Card from "../components/Card.astro";
+import ImageGridCard from "../components/ImageGridCard.astro";
+import LogoCard from "../components/LogoCard.astro";
+import SamarbejdCard from "../components/SamarbejdCard.astro";
+import SamtaleCard from "../components/SamtaleCard.astro";
+import YogaCard from "../components/YogaCard.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Forside</title>
+  </head>
+  <body>
+    <header>
+      <img src="imgs/logo.webp" alt="logo" />
+      <nav>
+        <ul class="menu">
+          <a href="/menu">Forside</a>
+          <a href="/underside">Soundwheel Pro</a>
+          <a href="/contact">Blog</a>
+        </ul>
+      </nav>
+      <div class="burger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </header>
+    <main>
+      <section>
+        <img src="/public/imgs/forside_billede.webp" alt="forside" />
+      </section>
+
+      <section>
+        <LogoCard img="/public/imgs/logo2.svg" title="Music | Visualisation | Guide on/off" subtitle="Empowering pauses" tag="PRØV 14 DAGE GRATIS" />
+      </section>
+
+      <section>
+        <ImageGridCard img1="/public/imgs/mann.webp" img2="/public/imgs/dame2.webp" img3="/public/imgs/dame.webp" img4="/public/imgs/mann2.webp" />
+      </section>
+
+      <section>
+        <YogaCard img="/public/imgs/yoga.webp" title="Find ro og fokus i en travl hverdag" text1="Med SoundWheel får du guidede lydrejser, der hjælper dig med at reducere stress, finde ro og genoplade mentalt uanset om du bruger det på arbejdet eller derhjemme." text2="Korte mentale pauser gør en mærkbar forskel for både trivsel og koncentration" text3="SoundWheels unikke lydunivers er udviklet til at skabe balance, øge fokus og give nyt overskud - til dig eller dit team." text4="KØB ADGANG : 49 kr/måneden" tag="START PRØVEPERIODE" />
+      </section>
+
+      <section>
+        <SamtaleCard title=" Optimer trivsel og performance i din organisation" tex1="Skab bedre mentale pauser med SoundWheel Work - et digitalt værktøj designet til at styrke medarbejdernes fokus, reducere stress og øge den samlede produktivitet." text2="I en tid med højt arbejdspres og komplekse krav til performance er mental bæredygtighed afgørende for at fastholde engagement og effektivitet." text3="SoundWheel Work integreres let i arbejdsdagen og giver organisationer et konkret redskab til at understøtte trivsel, fokus og resultater - på både individ- og teamniveau." text4="KØB ADGANG : Fra 9.999 kr for hele organisationen" tag="START PRØVEPERIODE" img="/public/imgs/team.webp" />
+      </section>
+      <section>
+        <Card title="Soundwheel Work 1K" subtitle="Op til 1.000 brugere" text="19.999 kr /år ekslusiv moms" tag="VÆLG PLAN" />
+        <Card title="Soundwheel Work 500" subtitle="Op til 500 brugere" text="14.999 kr /år ekslusiv moms" tag="VÆLG PLAN" />
+        <Card title="Soundwheel Work 100" subtitle="Op til 100 brugere" text="9.999 kr /år ekslusiv moms" tag="VÆLG PLAN" />
+      </section>
+
+      <section>
+        <SamarbejdCard img="/public/imgs/EK_logo.webp" img="/public/imgs/EK_logo.webp" img="/public/imgs/EK_logo.webp" img="/public/imgs/EK_logo.webp" img="/public/imgs/EK_logo.webp" img="/public/imgs/EK_logo.webp" />
+      </section>
+    </main>
+    <footer>
+      <section class="grid_1_1fr">
+        <div>
+          <h2>Nyhedsbrev</h2>
+          <p>Tilmeld dig vores nyhedsbrev<br />og få det seneste nyt fra os som den første!</p>
+
+          <div class="email_input">
+            <img src="/public/imgs/brev.webp" alt="Email" />
+          </div>
+
+          <a href="knap" class="footer_btn">Tilmeld dig</a>
+        </div>
+        <div>
+          <h2>Om os</h2>
+          <a href="">Kontakt os her</a>
+          <a href="">Vilkår og abonnement</a>
+          <a href="">Privatlivspolitik</a>
+          <div class="footer_socials">
+            <a href=""><img src="/public/imgs/Facebook.svg" alt="Facebook" /></a>
+            <a href=""><img src="/public/imgs/Instagram.svg" alt="Instagram" /></a>
+            <a href=""><img src="/public/imgs/Linkedin.svg" alt="LinkedIn" /></a>
+          </div>
+        </div>
+      </section>
+      <section class="footer_line">
+        <p>© 2025 SoundWheel. Alle rettigheder forbeholdes.</p>
+        <img src="/public/imgs/logo2.svg" alt="Soundwheel logo" />
+      </section>
+    </footer>
+  </body>
+</html>

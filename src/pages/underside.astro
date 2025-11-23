@@ -1,0 +1,86 @@
+---
+import KristianCard from "../components/KristianCard.astro";
+import TeamCard from "../components/TeamCard.astro";
+import RoCard from "../components/RoCard.astro";
+import Card from "../components/Card.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+
+    <title>Astro</title>
+  </head>
+  <body>
+    <header>
+      <img src="imgs/logo.webp" alt="logo" />
+      <nav>
+        <ul class="menu">
+          <a href="/menu">Forside</a>
+          <a href="/underside">Soundwheel Pro</a>
+          <a href="/contact">Blog</a>
+        </ul>
+      </nav>
+      <div class="burger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </header>
+    <main>
+      <h1>Tag på en lydrejse her</h1>
+      <img src="/public/imgs/logo_02.webp" alt="logo" />
+      <h2>SoundWheel gennem tiden</h2>
+
+      <section>
+        <KristianCard img="/public/imgs/kristian2.webp" subtitle1="En rejse fra rytme til ro" text1="Soundwheel blev født ud af en længsel efter stilhed. Her ville vi skabe et univers, hvor man kan finde ro og inspiration gennem lyd og visuelle oplevelser." text2="I dag er soundwheel et lyd univers, hvor musik møder mindfullness, og hvor hver tone inviterer til fordybelse." subtitle="Fra scenelys til stilhed" text3="Som den ene halvdel af UFO Yepha var Kristian vant til fulde sale, men ønskede at udforske lydens og stilhedens verden på en helt ny måde. SoundWheel blev resultatet af denne rejse." />
+      </section>
+
+      <section>
+        <TeamCard subtitle1="Teamet bag soundwheel" text1="Soundwheel udspringer af en fælles fascination af, hvordan lyd kan skabe ro, fokus og fællesskab." text2="Efter mange år i musikbranchen, søgte Kristian en ny måde at arbejde med lyd på, som inviterer til nærværd fremfor støj." text3="Undervejs samlede han Claus, Jonas og Andreas, der hver især bidrager med kreativitet, teknisk viden og sans for oplevelser." subtitle="Sammen skaber de Soundwheel, et univers hvor lyd bliver til et redskab til balance i en travl verden." img="/public/imgs/team2.webp" />
+      </section>
+
+      <section>
+        <RoCard img="/public/imgs/kristian.webp" subtitle="Bring ro og lydbevidsthed ind i jeres hverdag" text1="Soundwheel skaber skræddersyede foredrag og lydrejser, der styrker ro, fokus og fællesskab på arbejdspladsen." text2="Kristian deler sin historie og guider deltagerne gennem sanselige oplevelser, der bringer balance midt i hverdagen." text3="Foredrag - ''Fra støj til stilhed''. En inspirerende fortælling om kreativitet, forandring og indre ro." text4="Guidet lydoplevelse - En meditativ workshop, hvor lyd og stilhed åbner for nærværd og fokus." text5="Events og workshops - En sanselig pause til kickoff-dage, teambuidling eller retreats." tag="BOOK HER" />
+      </section>
+
+      <section>
+        <Card title="Soundwheel Work 1K" subtitle="Op til 1.000 brugere" text="19.999 kr /år ekslusiv moms" tag="VÆLG PLAN" />
+        <Card title="Soundwheel Work 500" subtitle="Op til 500 brugere" text="14.999 kr /år ekslusiv moms" tag="VÆLG PLAN" />
+        <Card title="Soundwheel Work 100" subtitle="Op til 100 brugere" text="9.999 kr /år ekslusiv moms" tag="VÆLG PLAN" />
+      </section>
+    </main>
+    <footer>
+      <section class="grid_1_1fr">
+        <div>
+          <h2>Nyhedsbrev</h2>
+          <p>Tilmeld dig vores nyhedsbrev<br />og få det seneste nyt fra os som den første!</p>
+
+          <div class="email_input">
+            <img src="/public/imgs/brev.webp" alt="Email" />
+          </div>
+
+          <a href="knap" class="footer_btn">Tilmeld dig</a>
+        </div>
+        <div>
+          <h2>Om os</h2>
+          <a href="">Kontakt os her</a>
+          <a href="">Vilkår og abonnement</a>
+          <a href="">Privatlivspolitik</a>
+          <div class="footer_socials">
+            <a href=""><img src="/public/imgs/Facebook.svg" alt="Facebook" /></a>
+            <a href=""><img src="/public/imgs/Instagram.svg" alt="Instagram" /></a>
+            <a href=""><img src="/public/imgs/Linkedin.svg" alt="LinkedIn" /></a>
+          </div>
+        </div>
+      </section>
+      <section class="footer_line">
+        <p>© 2025 SoundWheel. Alle rettigheder forbeholdes.</p>
+        <img src="/public/imgs/logo2.svg" alt="Soundwheel logo" />
+      </section>
+    </footer>
+  </body>
+</html>
