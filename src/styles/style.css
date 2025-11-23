@@ -2,15 +2,31 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  max-width: 100%;
 }
 
 body {
   font-family: sans-serif;
 }
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background: white;
+  font-family: sans-serif;
+}
+nav {
+  font-size: 20px;
+  color: #332b25;
+}
 
-header,
-main {
-  margin: 4rem;
+header img {
+  width: 105px;
+  height: auto;
+}
+
+main,
+header {
   padding: 2rem;
 }
 
@@ -34,6 +50,24 @@ img {
 
 .imagegrid {
   background-color: #c7dcdf;
+}
+.kristiancard {
+  background-color: #f3f1f1;
+}
+.teamcard {
+  background-color: #c7dcdf;
+}
+.rocard {
+  background-color: #f3f1f1;
+}
+
+.logounderside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  font-size: 25px;
+  color: #3f1416;
 }
 
 @media (min-width: 800px) {

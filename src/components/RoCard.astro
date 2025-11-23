@@ -2,16 +2,49 @@
 const { img, text1, subtitle, text2, text3, text4, text5, tag } = Astro.props;
 ---
 
-<article>
-  <img src={img} />
-  <p>{subtitle}</p>
-  <p>{text1}</p>
-  <p>{text2}</p>
-  <p>{text3}</p>
-  <p>{text4}</p>
-  <p>{text5}</p>
-  <p>{tag}</p>
+<article class="grid">
+  <div>
+    <img src={img} />
+  </div>
+  <div>
+    <p>{subtitle}</p>
+    <p>{text1}</p>
+    <p>{text2}</p>
+    <p>{text3}</p>
+    <p>{text4}</p>
+    <p>{text5}</p>
+    <p class="tag">{tag}</p>
+  </div>
 </article>
 
-<style></style>
+<style>
+  img {
+    max-width: 100%;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .title {
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  p {
+    padding: 5px;
+    font-size: 20px;
+  }
+  .tag {
+    display: inline-block;
+    padding-inline: 50px;
+    padding-block: 10px;
+    background-color: #3f1416;
+    color: white;
+    border-radius: 25px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+</style>
 <script></script>
