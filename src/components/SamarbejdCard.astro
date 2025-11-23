@@ -11,5 +11,13 @@ const { img } = Astro.props;
   <img src={img} />
 </article>
 
-<style></style>
+<style>
+  article {
+    padding: 3rem;
+    display: flex;
+    grid-template-rows: repeat(2, 1fr);
+    justify-content: center;
+    gap: 20px;
+  }
+</style>
 <script></script>

@@ -9,5 +9,17 @@ const { img1, img2, img3, img4 } = Astro.props;
   <img src={img4} />
 </article>
 
-<style></style>
+<style>
+  img {
+    max-width: 100%;
+  }
+
+  article {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    justify-content: center;
+  }
+</style>
+
 <script></script>

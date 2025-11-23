@@ -5,6 +5,7 @@ import LogoCard from "../components/LogoCard.astro";
 import SamarbejdCard from "../components/SamarbejdCard.astro";
 import SamtaleCard from "../components/SamtaleCard.astro";
 import YogaCard from "../components/YogaCard.astro";
+import "../styles/style.css";
 ---
 
 <html lang="en">
@@ -40,7 +41,7 @@ import YogaCard from "../components/YogaCard.astro";
         <LogoCard img="/public/imgs/logo2.svg" title="Music | Visualisation | Guide on/off" subtitle="Empowering pauses" tag="PRØV 14 DAGE GRATIS" />
       </section>
 
-      <section>
+      <section class="imagegrid">
         <ImageGridCard img1="/public/imgs/mann.webp" img2="/public/imgs/dame2.webp" img3="/public/imgs/dame.webp" img4="/public/imgs/mann2.webp" />
       </section>
 
@@ -51,13 +52,14 @@ import YogaCard from "../components/YogaCard.astro";
       <section>
         <SamtaleCard title=" Optimer trivsel og performance i din organisation" tex1="Skab bedre mentale pauser med SoundWheel Work - et digitalt værktøj designet til at styrke medarbejdernes fokus, reducere stress og øge den samlede produktivitet." text2="I en tid med højt arbejdspres og komplekse krav til performance er mental bæredygtighed afgørende for at fastholde engagement og effektivitet." text3="SoundWheel Work integreres let i arbejdsdagen og giver organisationer et konkret redskab til at understøtte trivsel, fokus og resultater - på både individ- og teamniveau." text4="KØB ADGANG : Fra 9.999 kr for hele organisationen" tag="START PRØVEPERIODE" img="/public/imgs/team.webp" />
       </section>
-      <section>
+      <section class="grid_3_1fr">
         <Card title="Soundwheel Work 1K" subtitle="Op til 1.000 brugere" text="19.999 kr /år ekslusiv moms" tag="VÆLG PLAN" />
         <Card title="Soundwheel Work 500" subtitle="Op til 500 brugere" text="14.999 kr /år ekslusiv moms" tag="VÆLG PLAN" />
         <Card title="Soundwheel Work 100" subtitle="Op til 100 brugere" text="9.999 kr /år ekslusiv moms" tag="VÆLG PLAN" />
       </section>
 
       <section>
+        <h2 class="samarbejdspartnere">Samarbejdspartnere</h2>
         <SamarbejdCard img="/public/imgs/EK_logo.webp" img="/public/imgs/EK_logo.webp" img="/public/imgs/EK_logo.webp" img="/public/imgs/EK_logo.webp" img="/public/imgs/EK_logo.webp" img="/public/imgs/EK_logo.webp" />
       </section>
     </main>
@@ -85,7 +87,7 @@ import YogaCard from "../components/YogaCard.astro";
           </div>
         </div>
       </section>
-      <section class="footer_line">
+      <section>
         <p>© 2025 SoundWheel. Alle rettigheder forbeholdes.</p>
         <img src="/public/imgs/logo2.svg" alt="Soundwheel logo" />
       </section>

@@ -4,10 +4,32 @@ const { tag, text, title, subtitle } = Astro.props;
 
 <article>
   <p>{title}</p>
-  <p>{subtitle}</p>
+  <p class="subtitle">{subtitle}</p>
   <p>{text}</p>
-  <p>{tag}</p>
+  <p class="tag">{tag}</p>
 </article>
 
-<style></style>
+<style>
+  article {
+    border: 2px solid black;
+    padding: 2.5rem;
+    text-align: center;
+    font-size: larger;
+  }
+
+  .tag {
+    display: inline-block;
+    padding-inline: 50px;
+    padding-block: 10px;
+    background-color: #3f1416;
+    color: white;
+    border-radius: 25px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .subtitle {
+    font-weight: bold;
+  }
+</style>
 <script></script>
