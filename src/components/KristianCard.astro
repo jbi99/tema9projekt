@@ -2,14 +2,37 @@
 const { img, text1, subtitle1, subtitle, text2, text3 } = Astro.props;
 ---
 
-<article>
-  <img src={img} />
-  <p>{subtitle1}</p>
-  <p>{text1}</p>
-  <p>{text2}</p>
-  <p>{subtitle}</p>
-  <p>{text3}</p>
+<article class="grid">
+  <div>
+    <img src={img} />
+  </div>
+  <div>
+    <p>{subtitle1}</p>
+    <p>{text1}</p>
+    <p>{text2}</p>
+    <p>{subtitle}</p>
+    <p>{text3}</p>
+  </div>
 </article>
 
-<style></style>
+<style>
+  img {
+    max-width: 100%;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .title {
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  p {
+    padding: 5px;
+    font-size: 20px;
+  }
+</style>
 <script></script>

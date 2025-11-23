@@ -12,6 +12,7 @@ import "../styles/style.css";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <link rel="stylesheet" href="style.css" />
 
     <title>Astro</title>
   </head>
@@ -25,26 +26,22 @@ import "../styles/style.css";
           <a href="/contact">Blog</a>
         </ul>
       </nav>
-      <div class="burger">
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
-      </div>
     </header>
     <main>
-      <h1>Tag på en lydrejse her</h1>
-      <img src="/public/imgs/logo_02.webp" alt="logo" />
+      <div class="logounderside">
+        <h1>Tag på en lydrejse her</h1>
+        <img src="/public/imgs/logo_02.webp" alt="logo" />
+      </div>
       <h2>SoundWheel gennem tiden</h2>
-
-      <section>
+      <section class="kristiancard">
         <KristianCard img="/public/imgs/kristian2.webp" subtitle1="En rejse fra rytme til ro" text1="Soundwheel blev født ud af en længsel efter stilhed. Her ville vi skabe et univers, hvor man kan finde ro og inspiration gennem lyd og visuelle oplevelser." text2="I dag er soundwheel et lyd univers, hvor musik møder mindfullness, og hvor hver tone inviterer til fordybelse." subtitle="Fra scenelys til stilhed" text3="Som den ene halvdel af UFO Yepha var Kristian vant til fulde sale, men ønskede at udforske lydens og stilhedens verden på en helt ny måde. SoundWheel blev resultatet af denne rejse." />
       </section>
 
-      <section>
+      <section class="teamcard">
         <TeamCard subtitle1="Teamet bag soundwheel" text1="Soundwheel udspringer af en fælles fascination af, hvordan lyd kan skabe ro, fokus og fællesskab." text2="Efter mange år i musikbranchen, søgte Kristian en ny måde at arbejde med lyd på, som inviterer til nærværd fremfor støj." text3="Undervejs samlede han Claus, Jonas og Andreas, der hver især bidrager med kreativitet, teknisk viden og sans for oplevelser." subtitle="Sammen skaber de Soundwheel, et univers hvor lyd bliver til et redskab til balance i en travl verden." img="/public/imgs/team2.webp" />
       </section>
 
-      <section>
+      <section class="rocard">
         <RoCard img="/public/imgs/kristian.webp" subtitle="Bring ro og lydbevidsthed ind i jeres hverdag" text1="Soundwheel skaber skræddersyede foredrag og lydrejser, der styrker ro, fokus og fællesskab på arbejdspladsen." text2="Kristian deler sin historie og guider deltagerne gennem sanselige oplevelser, der bringer balance midt i hverdagen." text3="Foredrag - ''Fra støj til stilhed''. En inspirerende fortælling om kreativitet, forandring og indre ro." text4="Guidet lydoplevelse - En meditativ workshop, hvor lyd og stilhed åbner for nærværd og fokus." text5="Events og workshops - En sanselig pause til kickoff-dage, teambuidling eller retreats." tag="BOOK HER" />
       </section>
 
