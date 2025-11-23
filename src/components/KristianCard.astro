@@ -7,7 +7,7 @@ const { img, text1, subtitle1, subtitle, text2, text3 } = Astro.props;
     <img src={img} />
   </div>
   <div>
-    <p>{subtitle1}</p>
+    <p class="subtitle">{subtitle1}</p>
     <p>{text1}</p>
     <p>{text2}</p>
     <p>{subtitle}</p>
@@ -25,13 +25,13 @@ const { img, text1, subtitle1, subtitle, text2, text3 } = Astro.props;
     gap: 20px;
   }
 
-  .title {
+  .subtitle {
     font-size: 25px;
     font-weight: bold;
   }
 
   p {
-    padding: 5px;
+    padding: 10px;
     font-size: 20px;
   }
 </style>
