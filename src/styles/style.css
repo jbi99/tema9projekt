@@ -1,0 +1,77 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+header,
+main {
+  margin: 4rem;
+  padding: 2rem;
+}
+
+section {
+  padding: 1rem;
+}
+
+.samarbejdspartnere {
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+}
+
+.grid_3_1fr {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.imagegrid {
+  background-color: #c7dcdf;
+}
+
+@media (min-width: 800px) {
+  .grid_3_1fr {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .ek_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  footer {
+    background: #c7dcdf;
+    padding-top: 4rem;
+    margin-top: 4rem;
+    width: 100%;
+  }
+
+  .grid_1_1fr {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+
+  footer h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+
+  footer p {
+    color: #332b25;
+  }
+
+  footer img {
+    width: 100px;
+  }
+}
