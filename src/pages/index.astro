@@ -1,39 +1,23 @@
 ---
+import PageLayout from "../layout/PageLayout.astro";
 import Card from "../components/Card.astro";
 import ImageGridCard from "../components/ImageGridCard.astro";
 import LogoCard from "../components/LogoCard.astro";
 import SamarbejdCard from "../components/SamarbejdCard.astro";
 import SamtaleCard from "../components/SamtaleCard.astro";
 import YogaCard from "../components/YogaCard.astro";
-import "../styles/style.css";
----
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Forside</title>
-  </head>
-  <body>
-    <header>
-      <img src="imgs/logo.webp" alt="logo" />
-      <nav>
-        <ul class="menu">
-          <a href="/menu">Forside</a>
-          <a href="/underside">Soundwheel Pro</a>
-          <a href="/contact">Blog</a>
-        </ul>
-      </nav>
-    </header>
+---
+<PageLayout title="Forside">
+
+  
     <main>
       <section>
         <img src="/public/imgs/forside_billede.webp" alt="forside" />
       </section>
 
       <section>
-        <LogoCard img="/public/imgs/logo2.svg" title="Music | Visualisation | Guide on/off" subtitle="Empowering pauses" tag="PRØV 14 DAGE GRATIS" />
+        <LogoCard img="/public/imgs/logo2.svg" title="Music | Visualisation | Guide on/off" subtitle="Empowering pauses" tag="PRØV 14 DAGE GRATIS" link="/content/14dage"/>
       </section>
 
       <section class="imagegrid">
@@ -58,34 +42,6 @@ import "../styles/style.css";
         <SamarbejdCard img="/public/imgs/EK_logo.webp" img="/public/imgs/EK_logo.webp" img="/public/imgs/EK_logo.webp" img="/public/imgs/EK_logo.webp" img="/public/imgs/EK_logo.webp" img="/public/imgs/EK_logo.webp" />
       </section>
     </main>
-    <footer>
-      <section class="grid_1_1fr">
-        <div>
-          <h2>Nyhedsbrev</h2>
-          <p>Tilmeld dig vores nyhedsbrev<br />og få det seneste nyt fra os som den første!</p>
+    
+  </PageLayout>
 
-          <div class="email_input">
-            <img src="/public/imgs/brev.webp" alt="Email" />
-          </div>
-
-          <a href="knap" class="footer_btn">Tilmeld dig</a>
-        </div>
-        <div>
-          <h2>Om os</h2>
-          <a href="">Kontakt os her</a>
-          <a href="">Vilkår og abonnement</a>
-          <a href="">Privatlivspolitik</a>
-          <div class="footer_socials">
-            <a href=""><img src="/public/imgs/Facebook.svg" alt="Facebook" /></a>
-            <a href=""><img src="/public/imgs/Instagram.svg" alt="Instagram" /></a>
-            <a href=""><img src="/public/imgs/Linkedin.svg" alt="LinkedIn" /></a>
-          </div>
-        </div>
-      </section>
-      <section>
-        <p>© 2025 SoundWheel. Alle rettigheder forbeholdes.</p>
-        <img src="/public/imgs/logo2.svg" alt="Soundwheel logo" />
-      </section>
-    </footer>
-  </body>
-</html>

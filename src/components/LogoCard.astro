@@ -1,12 +1,12 @@
 ---
-const { img, tag, title, subtitle } = Astro.props;
+const { img, tag, title, subtitle, link} = Astro.props;
 ---
 
 <article>
   <img src={img} />
   <p class="title">{title}</p>
   <p class="subtitle">{subtitle}</p>
-  <p class="tag">{tag}</p>
+  <p class="tag"><a href={link}>{tag}</a></p>
 </article>
 
 <style>
@@ -32,6 +32,9 @@ const { img, tag, title, subtitle } = Astro.props;
     border-radius: 25px;
     margin-top: 20px;
     margin-bottom: 20px;
+  }
+  a{
+    color: white;
   }
 </style>
 <script></script>
