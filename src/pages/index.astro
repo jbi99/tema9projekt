@@ -7,6 +7,16 @@ import SamarbejdCard from "../components/SamarbejdCard.astro";
 import SamtaleCard from "../components/SamtaleCard.astro";
 import YogaCard from "../components/YogaCard.astro";
 
+const quoteEndpoint = 'https://dummyjson.com/quotes';
+
+const quoteRequest = await fetch(quoteEndpoint);
+const quoteData = await quoteRequest.json();
+
+
+console.log("quotes first element", quoteData.quotes[0]); 
+
+
+
 ---
 <PageLayout title="Forside">
 
@@ -42,6 +52,6 @@ import YogaCard from "../components/YogaCard.astro";
         <SamarbejdCard img="/public/imgs/EK_logo.webp" img="/public/imgs/EK_logo.webp" img="/public/imgs/EK_logo.webp" img="/public/imgs/EK_logo.webp" img="/public/imgs/EK_logo.webp" img="/public/imgs/EK_logo.webp" />
       </section>
     </main>
-    
+   
   </PageLayout>
 
