@@ -5,10 +5,27 @@ import TeamCard from "../components/TeamCard.astro";
 import RoCard from "../components/RoCard.astro";
 import Card from "../components/Card.astro";
 
+const postEndpoint = 'https://dummyjson.com/posts';
+
+const postrequest = await fetch(postEndpoint);
+const postData = await postrequest.json();
+
+
 ---
 
 <PageLayout title="Soundwheel Pro">
-    <main>
+    <main> 
+<header>
+  <h1>Some posts</h1>
+</header>
+<section>
+  {postData.posts.map((post) => {
+  return (
+  <h3>{post.title}</h3>
+  <p>{post.body}</p>
+  )})}
+</section>
+
       <div class="logounderside">
         <h1>Tag på en lydrejse her</h1>
         <img src="/public/imgs/logo_02.webp" alt="logo" />
