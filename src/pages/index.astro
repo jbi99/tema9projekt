@@ -12,20 +12,49 @@ const quoteEndpoint = 'https://dummyjson.com/quotes';
 const quoteRequest = await fetch(quoteEndpoint);
 const quoteData = await quoteRequest.json();
 
+const postEndpoint = 'https://dummyjson.com/posts';
 
-console.log("quotes first element", quoteData.quotes[0]); 
+const postrequest = await fetch(postEndpoint);
+const postData = await postrequest.json();
 
+const dogEndpoint = "https://dog.ceo/api/breed/springer/images";
 
+const dogRequest = await fetch(dogEndpoint);
+const dogData = await dogRequest.json();
 
+console.log("dogData", dogData.message);
 ---
-<PageLayout title="Forside">
 
-  
+
+<PageLayout title="Forside">
     <main>
+
       <section>
+        <h1>Quote by{quoteData.quotes[0].author}</h1>
+      <p>
+        {quoteData.quotes[1].quote}
+      </p>
+      </section>
+   
+
+      <h2>kort sektion</h2>
+      <div class="grid_3_1"> </div>
+      {postData.posts.map((post, i) => { 
+        return(
+        <Card 
+        img= {dogData.message[i]}
+        text1={post.body}
+        tag= {post.tags[0]}  />
+        )
+
+      })}
+
+
+     
+<!-- 
+ <section>
         <img src="/public/imgs/forside_billede.webp" alt="forside" />
       </section>
-
       <section>
         <LogoCard img="/public/imgs/logo2.svg" title="Music | Visualisation | Guide on/off" subtitle="Empowering pauses" tag="PRØV 14 DAGE GRATIS" link="/content/14dage"/>
       </section>
@@ -41,6 +70,7 @@ console.log("quotes first element", quoteData.quotes[0]);
       <section>
         <SamtaleCard title=" Optimer trivsel og performance i din organisation" tex1="Skab bedre mentale pauser med SoundWheel Work - et digitalt værktøj designet til at styrke medarbejdernes fokus, reducere stress og øge den samlede produktivitet." text2="I en tid med højt arbejdspres og komplekse krav til performance er mental bæredygtighed afgørende for at fastholde engagement og effektivitet." text3="SoundWheel Work integreres let i arbejdsdagen og giver organisationer et konkret redskab til at understøtte trivsel, fokus og resultater - på både individ- og teamniveau." text4="KØB ADGANG : Fra 9.999 kr for hele organisationen" tag="START PRØVEPERIODE" img="/public/imgs/team.webp" />
       </section>
+
       <section class="grid_3_1fr">
         <Card title="Soundwheel Work 1K" subtitle="Op til 1.000 brugere" text="19.999 kr /år ekslusiv moms" tag="VÆLG PLAN" />
         <Card title="Soundwheel Work 500" subtitle="Op til 500 brugere" text="14.999 kr /år ekslusiv moms" tag="VÆLG PLAN" />
@@ -51,7 +81,7 @@ console.log("quotes first element", quoteData.quotes[0]);
         <h2 class="samarbejdspartnere">Samarbejdspartnere</h2>
         <SamarbejdCard img="/public/imgs/EK_logo.webp" img="/public/imgs/EK_logo.webp" img="/public/imgs/EK_logo.webp" img="/public/imgs/EK_logo.webp" img="/public/imgs/EK_logo.webp" img="/public/imgs/EK_logo.webp" />
       </section>
+      -->
     </main>
-   
   </PageLayout>
 
