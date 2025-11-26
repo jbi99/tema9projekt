@@ -39,12 +39,11 @@ console.log("dogData", dogData.message);
 
       <h2>kort sektion</h2>
       <div class="grid_3_1"> </div>
-      {postData.posts.map((post, i) => { 
+      {dogData.message.map((msg, i) => { 
         return(
         <Card 
-        img= {dogData.message[i]}
-        text1={post.body}
-        tag= {post.tags[0]}  />
+        img= {msg}
+         />
         )
 
       })}
