@@ -1,12 +1,15 @@
 ---
-const { tag, text, title, subtitle } = Astro.props;
+//const { tag, text, title, subtitle } = Astro.props;
+const {img} = Astro.props;
 ---
 
 <article>
+  <img src={img} alt="">
+<!--  
   <p>{title}</p>
   <p class="subtitle">{subtitle}</p>
   <p>{text}</p>
-  <p class="tag">{tag}</p>
+  <p class="tag">{tag}</p> -->
 </article>
 
 <style>
