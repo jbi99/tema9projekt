@@ -5,50 +5,46 @@ import TeamCard from "../components/TeamCard.astro";
 import RoCard from "../components/RoCard.astro";
 import Card from "../components/Card.astro";
 
-const postEndpoint = 'https://dummyjson.com/posts';
+const url = "https://ymlnlcumkrorbgateorr.supabase.co/rest/v1/soundwheelwork";
+const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InltbG5sY3Vta3JvcmJnYXRlb3JyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjQxMzc5MDgsImV4cCI6MjA3OTcxMzkwOH0.haBR9CabQwtAdAJKmDvXc3GN_AIuiLLBKq0X26TjUR4";
 
-const postrequest = await fetch(postEndpoint);
-const postData = await postrequest.json();
+const options = {
+  headers: {
+    apikey: key,
+  },
+};
 
+const supaRequest = await fetch(url, options);
+const supaData = await supaRequest.json();
 
+console.log("supaData", supaData);
 ---
 
 <PageLayout title="Soundwheel Pro">
-    <main> 
-<header>
-  <h1>Some posts</h1>
-</header>
-<section>
-  {postData.posts.map((post) => {
-  return (
-  <h3>{post.title}</h3>
-  <p>{post.body}</p>
-  )})}
-</section>
+  <main></main>
 
-      <div class="logounderside">
-        <h1>Tag på en lydrejse her</h1>
-        <img src="/public/imgs/logo_02.webp" alt="logo" />
-      </div>
-      <h2>SoundWheel gennem tiden</h2>
-      <section class="kristiancard">
-        <KristianCard img="/public/imgs/kristian2.webp" subtitle1="En rejse fra rytme til ro" text1="Soundwheel blev født ud af en længsel efter stilhed. Her ville vi skabe et univers, hvor man kan finde ro og inspiration gennem lyd og visuelle oplevelser." text2="I dag er soundwheel et lyd univers, hvor musik møder mindfullness, og hvor hver tone inviterer til fordybelse." subtitle="Fra scenelys til stilhed" text3="Som den ene halvdel af UFO Yepha var Kristian vant til fulde sale, men ønskede at udforske lydens og stilhedens verden på en helt ny måde. SoundWheel blev resultatet af denne rejse." />
-      </section>
+  <div class="logounderside">
+    <h1>Tag på en lydrejse her</h1>
+    <img src="/public/imgs/logo_02.webp" alt="logo" />
+  </div>
+  <h2>SoundWheel gennem tiden</h2>
+  <section class="kristiancard">
+    <KristianCard img="/public/imgs/kristian2.webp" subtitle1="En rejse fra rytme til ro" text1="Soundwheel blev født ud af en længsel efter stilhed. Her ville vi skabe et univers, hvor man kan finde ro og inspiration gennem lyd og visuelle oplevelser." text2="I dag er soundwheel et lyd univers, hvor musik møder mindfullness, og hvor hver tone inviterer til fordybelse." subtitle="Fra scenelys til stilhed" text3="Som den ene halvdel af UFO Yepha var Kristian vant til fulde sale, men ønskede at udforske lydens og stilhedens verden på en helt ny måde. SoundWheel blev resultatet af denne rejse." />
+  </section>
 
-      <section class="teamcard">
-        <TeamCard subtitle1="Teamet bag soundwheel" text1="Soundwheel udspringer af en fælles fascination af, hvordan lyd kan skabe ro, fokus og fællesskab." text2="Efter mange år i musikbranchen, søgte Kristian en ny måde at arbejde med lyd på, som inviterer til nærværd fremfor støj." text3="Undervejs samlede han Claus, Jonas og Andreas, der hver især bidrager med kreativitet, teknisk viden og sans for oplevelser." subtitle="Sammen skaber de Soundwheel, et univers hvor lyd bliver til et redskab til balance i en travl verden." img="/public/imgs/team2.webp" />
-      </section>
+  <section class="teamcard">
+    <TeamCard subtitle1="Teamet bag soundwheel" text1="Soundwheel udspringer af en fælles fascination af, hvordan lyd kan skabe ro, fokus og fællesskab." text2="Efter mange år i musikbranchen, søgte Kristian en ny måde at arbejde med lyd på, som inviterer til nærværd fremfor støj." text3="Undervejs samlede han Claus, Jonas og Andreas, der hver især bidrager med kreativitet, teknisk viden og sans for oplevelser." subtitle="Sammen skaber de Soundwheel, et univers hvor lyd bliver til et redskab til balance i en travl verden." img="/public/imgs/team2.webp" />
+  </section>
 
-      <section class="rocard">
-        <RoCard img="/public/imgs/kristian.webp" subtitle="Bring ro og lydbevidsthed ind i jeres hverdag" text1="Soundwheel skaber skræddersyede foredrag og lydrejser, der styrker ro, fokus og fællesskab på arbejdspladsen." text2="Kristian deler sin historie og guider deltagerne gennem sanselige oplevelser, der bringer balance midt i hverdagen." text3="Foredrag - ''Fra støj til stilhed''. En inspirerende fortælling om kreativitet, forandring og indre ro." text4="Guidet lydoplevelse - En meditativ workshop, hvor lyd og stilhed åbner for nærværd og fokus." text5="Events og workshops - En sanselig pause til kickoff-dage, teambuidling eller retreats." tag="BOOK HER" />
-      </section>
+  <section class="rocard">
+    <RoCard img="/public/imgs/kristian.webp" subtitle="Bring ro og lydbevidsthed ind i jeres hverdag" text1="Soundwheel skaber skræddersyede foredrag og lydrejser, der styrker ro, fokus og fællesskab på arbejdspladsen." text2="Kristian deler sin historie og guider deltagerne gennem sanselige oplevelser, der bringer balance midt i hverdagen." text3="Foredrag - ''Fra støj til stilhed''. En inspirerende fortælling om kreativitet, forandring og indre ro." text4="Guidet lydoplevelse - En meditativ workshop, hvor lyd og stilhed åbner for nærværd og fokus." text5="Events og workshops - En sanselig pause til kickoff-dage, teambuidling eller retreats." tag="BOOK HER" />
+  </section>
 
-      <section class="grid_3_1fr">
-        <Card title="Soundwheel Work 1K" subtitle="Op til 1.000 brugere" text="19.999 kr /år ekslusiv moms" tag="VÆLG PLAN" />
-        <Card title="Soundwheel Work 500" subtitle="Op til 500 brugere" text="14.999 kr /år ekslusiv moms" tag="VÆLG PLAN" />
-        <Card title="Soundwheel Work 100" subtitle="Op til 100 brugere" text="9.999 kr /år ekslusiv moms" tag="VÆLG PLAN" />
-      </section>
-    </main>
-   
-  </PageLayout>
-
+  <section class="grid_3_1fr">
+    {
+      supaData.map((data) => {
+        return <Card data={data} />;
+      })
+    }
+  </section>
+</PageLayout>
