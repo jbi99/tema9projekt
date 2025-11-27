@@ -36,8 +36,20 @@ section {
   padding: 1rem;
 }
 
+h1 {
+  font-size: larger;
+  padding-bottom: 2rem;
+}
+
+h2 {
+  margin: 1rem;
+  text-align: center;
+}
+
 .samarbejdspartnere {
   text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 1.5rem;
 }
 
 img {
@@ -52,7 +64,9 @@ img {
 
 .imagegrid {
   background-color: #c7dcdf;
+  justify-content: center;
 }
+
 .kristiancard {
   background-color: #f3f1f1;
 }
@@ -73,6 +87,10 @@ img {
 }
 
 @media (min-width: 800px) {
+  h1 {
+    font-size: 100px;
+  }
+
   .grid_3_1fr {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -109,5 +127,11 @@ img {
 
   footer img {
     width: 100px;
+  }
+
+  .imagegrid {
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
   }
 }

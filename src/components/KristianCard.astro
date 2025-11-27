@@ -19,13 +19,8 @@ const { img, text1, subtitle1, subtitle, text2, text3 } = Astro.props;
   img {
     max-width: 100%;
   }
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
 
-  .subtitle {
+    .subtitle {
     font-size: 25px;
     font-weight: bold;
   }
@@ -34,5 +29,15 @@ const { img, text1, subtitle1, subtitle, text2, text3 } = Astro.props;
     padding: 10px;
     font-size: 20px;
   }
+
+      @media (min-width: 800px) {
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+
 </style>
 <script></script>

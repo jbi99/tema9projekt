@@ -1,4 +1,5 @@
 ---
+import Button from "../components/Button.astro";
 const { img, text1, subtitle, text2, text3, text4, text5, tag } = Astro.props;
 ---
 
@@ -13,18 +14,14 @@ const { img, text1, subtitle, text2, text3, text4, text5, tag } = Astro.props;
     <p>{text3}</p>
     <p>{text4}</p>
     <p>{text5}</p>
-    <p class="tag">{tag}</p>
-  </div>
+<Button text="BOOK HER" href="/src/pages/content/placeholder.astro" />
+
+  <button></button>    </div>
 </article>
 
 <style>
   img {
     max-width: 100%;
-  }
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
   }
 
   .subtitle {
@@ -36,15 +33,16 @@ const { img, text1, subtitle, text2, text3, text4, text5, tag } = Astro.props;
     padding: 10px;
     font-size: 20px;
   }
-  .tag {
-    display: inline-block;
-    padding-inline: 50px;
-    padding-block: 10px;
-    background-color: #3f1416;
-    color: white;
-    border-radius: 25px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+
+ 
+        @media (min-width: 800px) {
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
+
+  
 </style>
 <script></script>
