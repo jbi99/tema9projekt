@@ -86,6 +86,10 @@ img {
   color: #3f1416;
 }
 
+footer {
+  background-color: #c7dcdf;
+}
+
 @media (min-width: 800px) {
   h1 {
     font-size: 100px;
@@ -105,8 +109,7 @@ img {
 
   footer {
     background: #c7dcdf;
-    padding-top: 4rem;
-    margin-top: 4rem;
+    padding-top: 1rem;
     width: 100%;
   }
 
