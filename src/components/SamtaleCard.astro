@@ -10,9 +10,10 @@ const { title, text1, text2, text3, text4, tag, img } = Astro.props;
     <p>{text2}</p>
     <p>{text3}</p>
     <p>{text4}</p>
-<Button text="START PRØVEPERIODE" href="/src/pages/content/placeholder.astro" />
+    <Button text="START PRØVEPERIODE" href="/content/placeholder.astro" />
 
-  <button></button>    </div>
+    <button></button>
+  </div>
 
   <div>
     <img src={img} />
@@ -24,40 +25,39 @@ const { title, text1, text2, text3, text4, tag, img } = Astro.props;
     max-width: 100%;
   }
 
+  @media (min-width: 800px) {
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
 
-    @media (min-width: 800px) {
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
+    .title {
+      font-size: 30px;
+      font-weight: bold;
+      padding-bottom: 0px;
+    }
 
-  .title {
-    font-size: 30px;
-    font-weight: bold;
-    padding-bottom: 0px;
-  }
+    p {
+      padding: 10px;
+      font-size: 20px;
+      line-height: 130%;
+    }
 
-  p {
-    padding: 10px;
-    font-size: 20px;
-    line-height: 130%;
-  }
+    .tag {
+      display: inline-block;
+      padding-inline: 50px;
+      padding-block: 10px;
+      background-color: #3f1416;
+      color: white;
+      border-radius: 25px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
 
-  .tag {
-    display: inline-block;
-    padding-inline: 50px;
-    padding-block: 10px;
-    background-color: #3f1416;
-    color: white;
-    border-radius: 25px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    article {
+      padding-top: 30px;
+    }
   }
-
-  article {
-    padding-top: 30px;
-  }
-}
 </style>
 <script></script>

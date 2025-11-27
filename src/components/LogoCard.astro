@@ -1,15 +1,16 @@
 ---
 import Button from "../components/Button.astro";
-const { img, tag, title, subtitle, link} = Astro.props;
+const { img, title, subtitle } = Astro.props;
 ---
 
 <article>
   <img src={img} />
   <p class="title">{title}</p>
   <p class="subtitle">{subtitle}</p>
-<Button text="PRØV 14 DAGE GRATIS" href="/content/placeholder" />
+  <Button text="PRØV 14 DAGE GRATIS" href="/content/placeholder" />
 
-  <button></button></article>
+  <button></button>
+</article>
 
 <style>
   article {
@@ -35,7 +36,7 @@ const { img, tag, title, subtitle, link} = Astro.props;
     margin-top: 20px;
     margin-bottom: 20px;
   }
-  a{
+  a {
     color: white;
   }
 </style>
