@@ -1,0 +1,46 @@
+---
+import type { GetStaticPaths } from "astro";
+import PageLayout from "../../layout/PageLayout.astro"
+
+export async function getStaticPaths() {
+
+const url = "https://ymlnlcumkrorbgateorr.supabase.co/rest/v1/soundwheelwork";
+const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InltbG5sY3Vta3JvcmJnYXRlb3JyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjQxMzc5MDgsImV4cCI6MjA3OTcxMzkwOH0.haBR9CabQwtAdAJKmDvXc3GN_AIuiLLBKq0X26TjUR4";
+
+const options = {
+  headers: {
+    apikey: key,
+  },
+};
+
+const supaRequest = await fetch(url, options);
+const supaData = await supaRequest.json();
+
+// console.log("supaData", supaData);
+
+    return supaData.map((data) => {
+        return {
+            params: { slug: data.slug},
+            props: { data },
+        };
+    });
+}
+
+const { data } = Astro.props;
+
+---
+
+<PageLayout title=`${data.slug}`>
+    <h2>{data.title}</h1>
+    <h2> {data.description}</p>
+    <h2> {data.price}</p>
+    <p><a href="/content/placeholder">PRØV PLAN</a></p>
+
+</PageLayout>
+
+<style>
+    p {
+        margin-bottom: 10rem;
+        margin-top: 1rem;
+    }
+</style>
