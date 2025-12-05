@@ -7,7 +7,7 @@ const { data } = Astro.props;
   <p>{data.title}</p>
   <p>{data.description}</p>
   <p>{data.price}</p>
-  <Button text="VÆLG PLAN" href="/content/placeholder" />
+  <Button text="VÆLG PLAN" href=`/content/${data.slug}` />
 
   <button></button>
 </article>
