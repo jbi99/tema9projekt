@@ -1,6 +1,6 @@
 ---
 import Button from "../components/Button.astro";
-const { title, text1, text2, text3, text4, tag, img } = Astro.props;
+const { title, text1, text2, text3, text4, img } = Astro.props;
 ---
 
 <article class="grid">
@@ -9,8 +9,8 @@ const { title, text1, text2, text3, text4, tag, img } = Astro.props;
     <p>{text1}</p>
     <p>{text2}</p>
     <p>{text3}</p>
-    <p>{text4}</p>
-    <Button text="START PRØVEPERIODE" href="/placeholder.astro" />
+    <p><slot /></p>
+    <Button text="START PRØVEPERIODE" href="/content/placeholder" />
 
     <button></button>
   </div>
